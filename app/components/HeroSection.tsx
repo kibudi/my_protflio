@@ -1,7 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { GiCrystalBall } from "react-icons/gi";
+import { useTranslation } from "react-i18next";
+
 export default function HeroSection() {
+  const { t } = useTranslation();
   return (
     <main className="relative flex flex-col justify-center items-center py-6 px-8">
       <motion.div
@@ -12,20 +15,17 @@ export default function HeroSection() {
       >
         <h1 className="text-3xl md:text-5xl font-black mb-4">
           <span className="bg-gradient-to-r from-white/80 via-cyan-200 to-teal-200 bg-clip-text text-transparent">
-            Web
+            {t("heroSection.web")}
           </span>
           <br />
           <span className="inline-flex items-center gap-2">
             <span className="bg-gradient-to-r from-cyan-300 via-teal-300 to-white/70 bg-clip-text text-transparent pl-10">
-              Wizard
+              {t("heroSection.wizard")}
             </span>
             <GiCrystalBall className="text-cyan-300 text-4xl md:text-5xl" />
           </span>
         </h1>
-        <p className="text-base md:text-lg text-white/70">
-          Transforming ideas into{" "}
-          <span className="font-bold text-cyan-300">Digital magic</span>
-        </p>
+        <p className="text-base md:text-lg text-white/70">{t("welcome")}</p>
       </motion.div>
     </main>
   );

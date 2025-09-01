@@ -1,7 +1,8 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
+import Providers from "./components/Providers";
+
 export default function RootLayout({
   children,
 }: {
@@ -10,10 +11,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Cursor />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Providers>
+          <Cursor />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

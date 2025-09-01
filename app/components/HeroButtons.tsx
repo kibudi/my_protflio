@@ -1,9 +1,11 @@
 "use client";
+import { motion} from "framer-motion";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { GiGlobe, GiSpellBook, GiMagicLamp } from "react-icons/gi";
+import { useTranslation } from "react-i18next";
+import { GiGlobe, GiMagicLamp, GiSpellBook } from "react-icons/gi";
 
-export default function HeroButtons() {
+function HeroButtons() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
@@ -19,7 +21,7 @@ export default function HeroButtons() {
             className="group-hover:animate-bounce text-violet-400"
             size={40}
           />
-          Explore My Universe
+          {t("hero.buttons.explore")}
         </Link>
       </motion.div>
 
@@ -36,7 +38,7 @@ export default function HeroButtons() {
             className="group-hover:animate-spin text-cyan-400"
             size={40}
           />
-          Let's Create Magic
+          {t("hero.buttons.magic")}
         </Link>
       </motion.div>
 
@@ -52,9 +54,11 @@ export default function HeroButtons() {
             className="group-hover:animate-bounce text-amber-400"
             size={40}
           />
-          Download Resume
+          {t("hero.buttons.resume")}
         </button>
       </motion.div>
     </div>
   );
 }
+
+export default HeroButtons;

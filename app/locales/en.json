@@ -1,0 +1,109 @@
+{
+  "navbar": {
+    "menu": "Open Menu",
+    "language": "עברית"
+  },
+  "hero": {
+    "name": "Shahar Kibudi",
+    "role": "Full Stack Developer",
+    "buttons": {
+      "explore": "Explore My Universe",
+      "magic": "Let's Create Magic",
+      "resume": "Download Resume"
+    }
+  },
+  "sidebar": {
+    "home": {
+      "name": "Home",
+      "description": "Welcome space"
+    },
+    "about": {
+      "name": "About",
+      "description": "My journey"
+    },
+    "projects": {
+      "name": "Projects",
+      "description": "Creative works"
+    },
+    "contact": {
+      "name": "Contact",
+      "description": "Let's connect"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "intro": {
+      "part1": "I'm a full-stack developer who loves turning ideas into interactive, user-friendly web and mobile applications.",
+      "part2": "I'm fascinated by the process of taking a concept and turning it into something tangible, real product that users can enjoy and rely on. Whether it's building a sleek website, a dynamic web app, or a mobile experience, I enjoy finding creative solutions to tricky problems.",
+      "part3": "I focus on writing clean, maintainable code while constantly learning new technologies. I'm always eager to take on challenges that push me to grow and create real impact through my work."
+    },
+    "resume": "Download My Resume",
+    "skills": {
+      "intro": "These are the technologies and tools I use to bring my projects to life from creating interactive web applications to crafting seamless mobile experiences. Each one plays a role in helping me write clean, efficient code."
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Featured Work",
+    "description": "Explore my portfolio of innovative applications, from smart navigation systems to mobile commerce solutions",
+    "cards": {
+      "smartCart": {
+        "title": "Smart Cart",
+        "description": "Fast and efficient navigation in the supermarket with an interactive map that shows the shortest route to collect items."
+      },
+      "ecommerce": {
+        "title": "React Native E-commerce",
+        "description": "A sleek and intuitive mobile shopping experience built with React Native. Browse products, add to cart, and checkout effortlessly."
+      }
+    },
+    "viewProject": "View Project",
+    "wantMore": "Want to see more?",
+    "visitGitHub": "Visit GitHub",
+    "technologies": {
+      "fullStack": "Full-Stack",
+      "navigation": "Navigation",
+      "react": "React",
+      "reactNative": "React Native",
+      "mobile": "Mobile",
+      "ecommerce": "E-commerce"
+    }
+  },
+  "contact": {
+    "title": "Get In",
+    "subtitle": "Touch",
+    "description": "Ready to bring your vision to life? Whether you have a groundbreaking idea or need an expert developer, I'm here to make it happen. Let's create something extraordinary together!",
+    "sendMessage": "Send a Message",
+    "connectWithMe": "Connect With Me",
+    "social": {
+      "email": "Email Me",
+      "emailDesc": "Quick response guaranteed",
+      "linkedin": "LinkedIn",
+      "linkedinDesc": "Professional networking",
+      "github": "GitHub",
+      "githubDesc": "Check out my code"
+    },
+    "form": {
+      "title": "Reach out anytime!",
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "✅ Message sent!",
+      "error": "❌ Something went wrong",
+      "serverError": "❌ Server error"
+    }
+  },
+  "footer": {
+    "rights": "© 2025 Shahar. All rights reserved.",
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile"
+    }
+  },
+  "welcome": "Welcome to my digital universe",
+  "heroSection": {
+    "web": "Web",
+    "wizard": "Wizard"
+  }
+}

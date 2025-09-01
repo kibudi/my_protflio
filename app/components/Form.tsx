@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", content: "" });
   const [status, setStatus] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus(t("contact.form.sending"));
 
     try {
       const res = await fetch("/api/contact", {
@@ -18,27 +20,27 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
-        setStatus(" Message sent!");
+        setStatus(t("contact.form.success"));
         setForm({ name: "", email: "", content: "" });
       } else {
-        setStatus(" Something went wrong");
+        setStatus(t("contact.form.error"));
       }
     } catch (err) {
       console.error(err);
-      setStatus(" Server error");
+      setStatus(t("contact.form.serverError"));
     }
   }
 
   return (
     <div className="max-w-md mx-auto bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-8 border border-gray-200 dark:border-gray-700 transition-all hover:scale-[1.01] hover:shadow-2xl duration-300">
       <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white text-center">
-        Reach out anytime!
+        {t("contact.form.title")}
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <input
           type="text"
-          placeholder="Your Name"
+          placeholder={t("contact.form.name")}
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           required
@@ -46,14 +48,14 @@ export default function ContactForm() {
         />
         <input
           type="email"
-          placeholder="Your Email"
+          placeholder={t("contact.form.email")}
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           required
           className="p-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white transition"
         />
         <textarea
-          placeholder="Your Message"
+          placeholder={t("contact.form.message")}
           value={form.content}
           onChange={(e) => setForm({ ...form, content: e.target.value })}
           required
@@ -64,7 +66,7 @@ export default function ContactForm() {
           type="submit"
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow-lg transition-transform active:scale-95"
         >
-          Send Message
+          {t("contact.form.send")}
         </button>
       </form>
 

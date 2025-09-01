@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaArrowLeft } from "react-icons/fa";
 import {
   GiByzantinTemple,
@@ -10,45 +11,46 @@ import {
   GiChampions,
 } from "react-icons/gi";
 
-const links = [
-  {
-    name: "Home",
-    path: "/",
-    icon: <GiByzantinTemple size={23} />,
-    color:
-      "from-[rgba(60,50,90,0.8)] via-[rgba(80,60,120,0.8)] to-[rgba(60,50,90,0.8)]",
-    description: "Welcome space",
-  },
-  {
-    name: "About",
-    path: "/about",
-    icon: <GiEvilBook size={23} />,
-    color:
-      "from-[rgba(20,40,60,0.8)] via-[rgba(40,80,100,0.8)] to-[rgba(20,40,60,0.8)]",
-    description: "My journey",
-  },
-  {
-    name: "Projects",
-    path: "/projects",
-    icon: <GiMagicPortal size={23} />,
-    color:
-      "from-[rgba(20,60,50,0.8)] via-[rgba(40,120,100,0.8)] to-[rgba(20,60,50,0.8)]",
-    description: "Creative works",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-    icon: <GiChampions size={23} />,
-    color:
-      "from-[rgba(60,20,20,0.8)] via-[rgba(120,40,40,0.8)] to-[rgba(60,20,20,0.8)]",
-    description: "Let's connect",
-  },
-];
-
 type SidebarProps = { isOpen: boolean; onClose: () => void };
 
 export default function SidebarMenu({ isOpen, onClose }: SidebarProps) {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const links = [
+    {
+      name: t("sidebar.home.name"),
+      path: "/",
+      icon: <GiByzantinTemple size={23} />,
+      color:
+        "from-[rgba(60,50,90,0.8)] via-[rgba(80,60,120,0.8)] to-[rgba(60,50,90,0.8)]",
+      description: t("sidebar.home.description"),
+    },
+    {
+      name: t("sidebar.about.name"),
+      path: "/about",
+      icon: <GiEvilBook size={23} />,
+      color:
+        "from-[rgba(20,40,60,0.8)] via-[rgba(40,80,100,0.8)] to-[rgba(20,40,60,0.8)]",
+      description: t("sidebar.about.description"),
+    },
+    {
+      name: t("sidebar.projects.name"),
+      path: "/projects",
+      icon: <GiMagicPortal size={23} />,
+      color:
+        "from-[rgba(20,60,50,0.8)] via-[rgba(40,120,100,0.8)] to-[rgba(20,60,50,0.8)]",
+      description: t("sidebar.projects.description"),
+    },
+    {
+      name: t("sidebar.contact.name"),
+      path: "/contact",
+      icon: <GiChampions size={23} />,
+      color:
+        "from-[rgba(60,20,20,0.8)] via-[rgba(120,40,40,0.8)] to-[rgba(60,20,20,0.8)]",
+      description: t("sidebar.contact.description"),
+    },
+  ];
 
   return (
     <AnimatePresence>
