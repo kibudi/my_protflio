@@ -1,6 +1,6 @@
 "use client";
 import ContactForm from "../components/Form";
-import { FaLinkedin, FaEnvelope, FaGithub, FaRocket } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaGithub,  } from "react-icons/fa";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { GrAction } from "react-icons/gr";

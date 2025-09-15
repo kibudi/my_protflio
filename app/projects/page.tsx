@@ -22,7 +22,7 @@ interface ProjectCardProps {
 
 export default function Projects() {
   const { t } = useTranslation();
-  
+
   const projects: Project[] = [
     {
       title: t("projects.cards.smartCart.title"),
@@ -30,7 +30,11 @@ export default function Projects() {
       imageUrl:
         "https://biztechmagazine.com/sites/biztechmagazine.com/files/styles/cdw_article_hero/public/articles/202004/supermarket%20iot%20hero.jpg.webp?itok=Ns3dU-6n",
       projectUrl: "https://github.com/Hahabob/hackathon",
-      technologies: [t("projects.technologies.fullStack"), t("projects.technologies.navigation"), t("projects.technologies.react")],
+      technologies: [
+        t("projects.technologies.fullStack"),
+        t("projects.technologies.navigation"),
+        t("projects.technologies.react"),
+      ],
       icon: Zap,
       gradient: "from-blue-600 via-purple-600 to-indigo-700",
     },
@@ -40,7 +44,11 @@ export default function Projects() {
       imageUrl:
         "https://plus.unsplash.com/premium_photo-1681488350342-19084ba8e224?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww",
       projectUrl: "https://github.com/YuvalAmit8471/react-native",
-      technologies: [t("projects.technologies.reactNative"), t("projects.technologies.mobile"), t("projects.technologies.ecommerce")],
+      technologies: [
+        t("projects.technologies.reactNative"),
+        t("projects.technologies.mobile"),
+        t("projects.technologies.ecommerce"),
+      ],
       icon: Smartphone,
       gradient: "from-emerald-500 via-teal-500 to-cyan-600",
     },
@@ -53,15 +61,6 @@ export default function Projects() {
         staggerChildren: 0.2,
         delayChildren: 0.3,
       },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
     },
   };
 
@@ -143,7 +142,11 @@ export default function Projects() {
             animate="visible"
           >
             {projects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+              />
             ))}
           </motion.div>
 
@@ -265,7 +268,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               whileTap={{ scale: 0.95 }}
             >
               <Github className="w-5 h-5 text-gray-700" />
-              <span className="text-gray-700 font-semibold">{t("projects.viewProject")}</span>
+              <span className="text-gray-700 font-semibold">
+                {t("projects.viewProject")}
+              </span>
               <ExternalLink className="w-4 h-4 text-gray-700" />
             </motion.a>
           </motion.div>
