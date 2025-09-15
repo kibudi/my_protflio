@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar";
 
 export default function ContactPage() {
   const { t } = useTranslation();
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [_mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
